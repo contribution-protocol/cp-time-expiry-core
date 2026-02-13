@@ -1,7 +1,10 @@
-# cp-time-expiry-core
-
+# cp-time-expiry-core  
 Insert-only cron-based expiration core.  
 （Insert-only型・cron駆動の失効コア）
+
+---
+
+## Overview / 概要
 
 This repository contains the minimal core logic for time-based expiration  
 in the Contribution Protocol (CP).
@@ -30,9 +33,9 @@ but an append-only record of a state transition event.
 
 ## What this is / これは何か
 
-This is not the full accounting system.  
-This is not the reserve logic.  
-This is not the governance layer.
+This is **not** the full accounting system.  
+This is **not** the reserve logic.  
+This is **not** the governance layer.
 
 これは会計システム全体ではない。  
 これは引当ロジックではない。  
@@ -46,8 +49,20 @@ that proves time-based irreversible expiration.
 
 ---
 
+## Structural Properties / 構造特性
+
+- Cron-based autonomous execution  
+  （cronによる自律実行）
+- Database time (NOW) as authority  
+  （DB時刻を唯一の基準とする）
+- Insert-only event logging  
+  （イベントは追記のみ）
+- No human intervention required  
+  （人の判断を前提としない）
+
+---
+
 ## Status / 状態
 
-Experimental minimal kernel.  
-（実験的ミニマルカーネル）
-
+Minimal verified structural kernel.  
+（構造検証済みミニマルカーネル）
